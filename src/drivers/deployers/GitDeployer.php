@@ -337,7 +337,7 @@ class GitDeployer extends BaseDeployer
     /**
      * Updates a file by saving the value or deleting the file if empty.
      */
-    private function updateFile(string $value, string $filePath): void
+    private function updateFile(?string $value, string $filePath): void
     {
         if (empty($value)) {
             if (file_exists($filePath)) {
